@@ -32,7 +32,7 @@ function print_centered {
 
 echo -e
 print_centered "-"  "-" 
-print_centered "> Convertendo vídeo de MP4 para MOV preset Copy <"
+print_centered "> Convertendo vídeo de MP4 para MOV preset PRORES profile 0 <"
 print_centered "-"  "-" 
 echo -e
 
@@ -48,13 +48,13 @@ fi
 
 for vid in *.mp4; do  
 noext="${vid%.mp4}"    
-ffmpeg -i "$vid" -acodec pcm_s16le -vcodec copy "${noext// /_}.mov"
+ffmpeg -i "$vid" -acodec pcm_s16le -vcodec dnxhd -profile:v dnxhr_hq -pix_fmt yuv422p "${noext// /_}.mov"
 mv "$vid" "$origdir"
 
 done
 
 echo -e
 print_centered "-"  "-" 
-print_centered "> Convertido para .MOV preset Copy <"
+print_centered "> Convertido para .MOV preset DNX HD <"
 print_centered "-"  "-" 
 echo -e

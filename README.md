@@ -37,8 +37,10 @@ Nome do Shell | Descrição
 assets | Imagens do arquivo README.md
 mp4-para-mov-copy.sh | Usado parâmetro copy
 mp4-para-mov-prores.sh | Usado parâmetro prores
-mp4-para-mov-prores-profile-0.sh | Usado parâmetro prores com profile de compressão 0
-
+mp4-para-mov-prores-profile-0.sh | Usado parâmetro -vcodec prores -profile:v 0 
+mp4-para-mov-xvid.sh | Usado parâmetro -vcodec libxvid -q:v 1
+mp4-para-mov-dnxhd.sh | Usado parâmetro -vcodec dnxhd
+avi-para-mov.sh | Usado parâmetro .avi para -vcodec prores
 <br><br><br>
 
 ### Referências
